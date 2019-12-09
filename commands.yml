@@ -688,3 +688,13 @@ user:
     example: -n myadmin -d Administrator -r \"Account Administrator,Administrator\" -p ******** -m admin@localhost
     method: POST
     endpoint: /controller/rest/users?user-id={{i:user_id}}&user-name={{n:user_name}}&user-display-name={{d:user_display_name}}&user-password={{p:user_password?}}&user-email={{m:user_mail}}&user-roles={{r:user_roles?}}
+role:
+  title: Roles
+  description: Commands working on roles.
+  create:
+    title: Create a new role.
+    description: Provide a JSON file (with @ as prefix) containing the name and permissions (-d) as parameters.
+    example: -d @role.json
+    method: POST
+    endpoint: /controller/restui/accountRoleAdministrationUiService/accountRoles/create
+    payload: {{d:role}}
