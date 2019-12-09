@@ -711,3 +711,13 @@ role:
     example:
     method: GET
     endpoint: /controller/api/rbac/v1/roles
+group:
+  title: Groups
+  description: Commands working on groups.
+  create:
+    title: Create a new group.
+    description: Provide a JSON file (with @ as prefix) (-d) as parameter.
+    example: -d @group.json
+    method: POST
+    endpoint: /controller/restui/groupAdministrationUiService/groups/create
+    payload: {{d:group}}
