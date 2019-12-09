@@ -721,3 +721,9 @@ group:
     method: POST
     endpoint: /controller/restui/groupAdministrationUiService/groups/create
     payload: {{d:group}}
+  list:
+    title: List all groups (REST API).
+    description:
+    example:
+    method: GET
+    endpoint: /controller/api/rbac/v1/groups
