@@ -698,3 +698,10 @@ role:
     method: POST
     endpoint: /controller/restui/accountRoleAdministrationUiService/accountRoles/create
     payload: {{d:role}}
+  addgroups:
+    title: Add groups to a role.
+    description: Provide a role id (-r) and a JSON file (with @ as prefix) containing the group ids (-d) as parameters.
+    example: -r 42 -d @groups.json
+    method: POST
+    endpoint: /controller/restui/accountRoleAdministrationUiService/accountRoles/{{r:role_id}}/addGroups
+    payload: {{d:groups}}
