@@ -705,3 +705,9 @@ role:
     method: POST
     endpoint: /controller/restui/accountRoleAdministrationUiService/accountRoles/{{r:role_id}}/addGroups
     payload: {{d:groups}}
+  list:
+    title: List all roles (REST API).
+    description: This command requires no further arguments.
+    example:
+    method: GET
+    endpoint: /controller/api/rbac/v1/roles
